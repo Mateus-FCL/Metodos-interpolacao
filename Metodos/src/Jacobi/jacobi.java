@@ -9,11 +9,10 @@ public class jacobi {
 
         double[] x = new double[n]; // Vetor solução
         int inter = 0; // Número de iterações realizadas
-        int info = -1; // Informação sobre a convergência
+        int info = 0; // Informação sobre a convergência
 
         jacobiSolucao(n, a, b, interMax, toler, x, inter, info);
 
-        // Exibir resultados
         if (info == 0) {
             System.out.println("Solução encontrada após " + inter + " iterações:");
             for (int i = 0; i < n; i++) {
